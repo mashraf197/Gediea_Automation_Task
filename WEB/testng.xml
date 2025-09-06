@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationExerciseSuite" verbose="1" parallel="false">
+
+    <!-- Smoke Tests -->
+    <test name="Smoke_Tests">
+        <classes>
+            <class name="com.ae.tests.HomePageTests"/>
+            <class name="com.ae.tests.LoginTest"/>
+            <class name="com.ae.tests.SignupTest"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+    </test>
+
+    <!-- Regression Tests -->
+    <test name="Regression_Tests">
+        <classes>
+            <class name="com.ae.tests.HomePageTests"/>
+            <class name="com.ae.tests.LoginTest"/>
+            <class name="com.ae.tests.SignupTest"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+    </test>
+
+</suite>

@@ -10,6 +10,7 @@ public class HomePage {
     // Locators
     private final By signupLoginLink = By.cssSelector("a[href='/login']");
 
+    // Actions
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }

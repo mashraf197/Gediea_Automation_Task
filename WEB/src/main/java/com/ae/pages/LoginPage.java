@@ -17,7 +17,7 @@ public class LoginPage {
     private final By loginPasswordField = By.cssSelector("input[data-qa='login-password']");
     private final By loginButton = By.cssSelector("button[data-qa='login-button']");
 
-    // Messages / links
+    // Messages & links
     private final By signupErrorMsg = By.xpath("//p[contains(text(),'Email Address already exist!')]");
     private final By loginErrorMsg = By.xpath("//p[contains(text(),'Your email or password is incorrect!')]");
     private static final By logoutLink = By.cssSelector("a[href='/logout']");
@@ -27,7 +27,7 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    // ----- Signup Actions -----
+    // Signup Actions
     public void enterSignupName(String name) {
         driver.findElement(signupNameField).sendKeys(name);
     }
@@ -44,7 +44,7 @@ public class LoginPage {
         return driver.findElement(signupErrorMsg).isDisplayed();
     }
 
-    // ----- Login Actions -----
+    // Login Actions
     public void enterLoginEmail(String email) {
         driver.findElement(loginEmailField).sendKeys(email);
     }

@@ -26,6 +26,7 @@ public class LoginTest extends BaseTest {
         loginPage.enterLoginPassword("mohamed123456");
         loginPage.clickLoginButton();
 
+        // Assertion
         Assert.assertTrue(loginPage.isLogoutVisible(),
                 "Login failed – Logout link not visible!");
     }
@@ -44,6 +45,7 @@ public class LoginTest extends BaseTest {
         loginPage.enterLoginPassword("wrongPassword");
         loginPage.clickLoginButton();
 
+        // Assertion
         Assert.assertTrue(loginPage.isLoginErrorVisible(),
                 "Expected error message not shown for wrong password!");
     }
@@ -62,6 +64,7 @@ public class LoginTest extends BaseTest {
         loginPage.enterLoginPassword("password123");
         loginPage.clickLoginButton();
 
+        // Assertion
         Assert.assertTrue(loginPage.isLoginErrorVisible(),
                 "Expected login error not shown for non-existing email!");
     }
@@ -77,6 +80,7 @@ public class LoginTest extends BaseTest {
         loginPage.enterLoginPassword(password);
         loginPage.clickLoginButton();
 
+        // Assertion
         if (expectedResult.equals("success")) {
             Assert.assertTrue(LoginPage.isLogoutVisible(),
                     "Login failed – Logout link not visible");

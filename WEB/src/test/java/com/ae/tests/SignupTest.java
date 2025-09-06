@@ -64,7 +64,7 @@ public class SignupTest extends BaseTest {
         loginPage.enterSignupName("Muhamed");
         loginPage.enterSignupEmail("muhamed@gmail.com");
         loginPage.clickSignupButton();
-
+        // Assertion
         Assert.assertTrue(loginPage.isSignupErrorVisible(),
                 "Expected error message for existing email not found!");
     }

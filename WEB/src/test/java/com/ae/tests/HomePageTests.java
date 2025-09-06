@@ -17,6 +17,7 @@ public class HomePageTests extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(homePage.getSignupLoginButton()));
 
+        // Assertion
         Assert.assertTrue(homePage.isLoaded(),
                 "Homepage did not load correctly (Signup/Login button not visible)");
     }
